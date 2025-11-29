@@ -16,5 +16,7 @@ class Book:
         }
 
     @classmethod
-    def from_dict(cls, data):
-        return cls(**data)
+    def from_dict(Book, data):
+        return Book(title=data['title'],
+                    author=data['author'],
+                    year=data['year'])
